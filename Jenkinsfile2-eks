@@ -8,7 +8,7 @@ pipeline{
         }
         stage('Checkout from Git'){
             steps{
-                git branch: 'main', credentialsId: 'github-token', url: 'https://github.com/Aseemakram19/amazon-prime-video-kubernetes.git'
+                git branch: 'main', credentialsId: 'github-token', url: 'https://github.com/Satya-jit/amazon-prime-video-kubernetes.git'
             }
         }        
         stage('Deploy to EKS Cluster') {
@@ -55,9 +55,9 @@ pipeline{
                     <p>Started by: ${buildUser}</p>
                     <p>Build URL: <a href="${env.BUILD_URL}">${env.BUILD_URL}</a></p>
                 """,
-                to: 'mohdaseemakram19@gmail.com',
-                from: 'mohdaseemakram19@gmail.com',
-                replyTo: 'mohdaseemakram19@gmail.com',
+                to: 'satyajitdas0033@gmail.com',
+                from: 'satyajitdas0033@gmail.com',
+                replyTo: 'satyajitdas0033@gmail.com',
                 mimeType: 'text/html',
                 attachmentsPattern: 'trivyfs.txt,trivyimage.txt'
             )
